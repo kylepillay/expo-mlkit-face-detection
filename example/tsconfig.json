@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "expo-mlkit-face-detection": ["../src/index"],
+      "expo-mlkit-face-detection/*": ["../src/*"]
+    }
+  }
+}
