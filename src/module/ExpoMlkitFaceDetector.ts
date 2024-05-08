@@ -55,7 +55,6 @@ export class ExpoMlkitFaceDetector {
   }
 
   async initialize(options?: ExpoMlkitFaceDetectorOptions) {
-    console.log("Initializing ExpoMlkitFaceDetector");
     try {
       if (options) {
         this.options = options;
