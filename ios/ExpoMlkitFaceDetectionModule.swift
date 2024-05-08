@@ -22,8 +22,6 @@ public class ExpoMlkitFaceDetectionModule: Module {
         }
 
     AsyncFunction("detectFaces") { (imagePath: String, promise: Promise) in
-        let logger = Logger()
-
         Task {
             do {
                 guard let faceDetector = self.faceDetector else {
@@ -32,7 +30,6 @@ public class ExpoMlkitFaceDetectionModule: Module {
                 }
                 let image = try ExpoMlkitImage(imagePath: imagePath)
                 let result = try await faceDetector.detectFaces(image: image)
-                logger.debug(result)
                 // Use result to resolve promise
                 promise.resolve(result.record)
 

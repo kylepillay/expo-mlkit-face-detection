@@ -23,7 +23,6 @@ public class ExpoMlkitFaceDetectionResult {
     }
 
     var record: ExpoMlkitFaceDetectionResultRecord {
-        let logger = Logger()
         let record = ExpoMlkitFaceDetectionResultRecord()
         let faces = self.faces.map { face in
             let expoFace = ExpoMlkitFace()
